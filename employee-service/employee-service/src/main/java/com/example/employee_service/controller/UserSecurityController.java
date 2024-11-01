@@ -15,7 +15,7 @@ public class UserSecurityController {
     UserSecurityService userSecurityService;
     //Get User Based On userName
     @GetMapping("/{Name}")
-    public ResponseEntity<UserSecurity> getPassengerByName(@PathVariable("Name")String name)
+    public ResponseEntity<UserSecurity> getUserByName(@PathVariable("Name")String name)
     {
         UserSecurity getUser=userSecurityService.getUser(name);
         return new ResponseEntity<UserSecurity>(getUser, HttpStatus.OK);
